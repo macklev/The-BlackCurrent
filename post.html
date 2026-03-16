@@ -12,10 +12,14 @@
 <body>
 
 <header>
+    <ul>
     <nav>
-        <a href="register.html">Register </a>
-        <a href="login.html">Login</a>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register </a></li>
+        <li><a href="post.html">Post</a></li>
+        <li><a href="feed.html">Feed</a></li>
     </nav>
+    </ul>
 
     <img src="./Images/blackcurrent.png" alt="Logo" class="logo">
     <h1>The BlackCurrent</h1>
@@ -24,14 +28,21 @@
 
 <main>
     <form class="make-post">
-        <input type="text" id="post-text" name="post" placeholder="Write your post here."><br>
-        <button type="submit">Post</button>
+        <textarea id="post-text" name="post" placeholder="Write your post here." rows="4"></textarea><br>
+        <input type="file" id="post-image" name="post-image" accept="image/*">
+        <input type="submit" value="Post" id="button">
+        <p id="post-message" aria-live="polite"></p>
     </form>
+
+    <div class="post-feed">
+        
+    </div>
 </main>
 
 <footer>
     <h3>&copy; 2026 The BlackCurrent. All rights reserved.</h3>  
 </footer>
 
+<script src="app.js" defer></script>
 </body>
 </html>

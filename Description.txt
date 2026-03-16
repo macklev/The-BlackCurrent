@@ -1,7 +1,0 @@
-For my final project, I want to create a social media site specifically for members of my house.
-There are 8 of us and they have actually been asking me to create something for ourselves for a while (since one of us doesn't like traditional social media).
-Key features I want to include are:
-1. Account creation
-2. Post onto a main feed and like/comment on each other's posts
-3. Hopefully mark the location each user is at (manually by the user, with options like Campus, Home, Work, Hometown, etc.)
-4. If I'm able to, I want to make it a bit like MySpace and allow users to customize their profile page, but this is more of a reach goal than a feature I'm set on including.

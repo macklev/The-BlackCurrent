@@ -18,16 +18,39 @@
     width: 50px;
 }
 
-nav {
-    display: inline-flex;
-    color: #FBDE9C;
-    font-family: "Libre Baskerville", sans-serif;
+ul {
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+    overflow: hidden;
+    background-color:#45151B;
+    border: 1px solid #2b0b0f;
+}
+
+ul li {
+    float: left;
     font-size: 18px;
-    border: 4px solid #45151B;
-    border-radius: 10px;
-    background-color: #EA9DAE;
-    box-shadow: 0 3px 10px #682d2e;
-    padding: 5px 5px;
+    border-right: 1px solid #2b0b0f;
+}
+
+ul li:last-child {
+    border-right: none;
+}
+
+ul li a {
+    display: block;
+    color: #EA9DAE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;;
+}
+
+ul li a:hover {
+    background-color: #682d2e;
+}
+
+ul li a.active {
+    background-color: #682d2e;
 }
 
 hr {
@@ -76,7 +99,18 @@ body {
     box-shadow: 0 10px 10px #682d2e;
 }
 
-button {
+#post-text {
+    width: 100%;
+    resize: vertical;
+    min-height: 90px;
+}
+
+#post-image {
+    width: 100%;
+    margin-top: 8px;
+}
+
+#button {
     background-color: #45151B;
     color: #EA9DAE;
     border: none;
@@ -84,6 +118,56 @@ button {
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+}
+
+#post-message {
+    min-height: 20px;
+    margin-top: 10px;
+    color: #45151B;
+    font-size: 14px;
+}
+
+.post-feed,
+.feed-posts {
+    width: min(700px, 90%);
+    margin: 20px auto 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.post-card {
+    background-color: #F99256;
+    border: 3px solid #45151B;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 8px 10px #682d2e;
+    color: #2b0b0f;
+}
+
+.post-card p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+}
+
+.post-card small {
+    display: block;
+    margin-top: 8px;
+    color: #45151B;
+}
+
+.post-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #45151B;
+}
+
+.empty-feed {
+    text-align: center;
+    color: #45151B;
 }
 
 footer {
