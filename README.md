@@ -10,4 +10,4 @@ Users will be able to post, customize their profile, and add each other as frien
 
 This is the ERD and business rules for my proposed social media.
 
-![BlackCurrent ERD](/Images/The%20BlackCurrent%20(1).pdf)
+![BlackCurrent ERD](/Images/ERD.png)
