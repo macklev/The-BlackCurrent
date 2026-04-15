@@ -1,5 +1,6 @@
 const STORAGE_KEY = "blackcurrent-posts";
 
+
 function getPosts() {
     const rawPosts = localStorage.getItem(STORAGE_KEY);
     if (!rawPosts) {
@@ -75,10 +76,8 @@ function fileToDataUrl(file) {
 }
 
 async function setupPostForm() {
-    const form = document.querySelector(".make-post");
-    if (!form) {
-        return;
-    }
+    const form = document.getElementById("post-form");
+    if (!form) return;
 
     const textInput = document.getElementById("post-text");
     const imageInput = document.getElementById("post-image");
@@ -96,6 +95,7 @@ async function setupPostForm() {
         }
 
         let imageDataUrl = "";
+
         if (file) {
             try {
                 imageDataUrl = await fileToDataUrl(file);
@@ -106,22 +106,30 @@ async function setupPostForm() {
         }
 
         const posts = getPosts();
-        posts.push({
+
+        const newPost = {
             id: crypto.randomUUID(),
             text,
             image: imageDataUrl,
             createdAt: new Date().toISOString()
-        });
+        };
+
+        console.log("New Post Created:", newPost);
+
+        posts.push(newPost);
+
         savePosts(posts);
 
         form.reset();
-        message.textContent = "Post created.";
+        message.textContent = "Post created successfully!";
+
         renderPosts(".post-feed");
+        
     });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     setupPostForm();
-    renderPosts(".feed-posts");
     renderPosts(".post-feed");
 });
+
