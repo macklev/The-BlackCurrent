@@ -8,7 +8,6 @@ const profileMessage = document.getElementById("profile-message");
 const profilePreview = document.getElementById("profile-preview");
 const profileName = document.getElementById("profile-name");
 const profileHandle = document.getElementById("profile-handle");
-const profileEmail = document.getElementById("profile-email");
 const profileBioDisplay = document.getElementById("profile-bio-display");
 
 if (!user) {

@@ -27,15 +27,15 @@ if(logout) logout.addEventListener('click', removeCurrentUser)
 
 
 export async function fetchData(route = '', data = {}, methodType) {
-  const response = await fetch(`http://localhost:3000${route}`, {
-    method: methodType, // *POST, PUT, DELETE, etc.
+  const response = await fetch(`http://localhost:3500${route}`, {
+    method: methodType,
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(data) // body data type must match "Content-Type" header
+    body: JSON.stringify(data)
   });
   if (response.ok) {
-    return await response.json(); // parses JSON response into native JavaScript objects
+    return await response.json();
   } else {
     throw await response.json();
   }

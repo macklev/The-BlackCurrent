@@ -49,8 +49,20 @@ async function createComment(comment) {
     return await getCommentsByPostId(comment.post_id)
 }
 
+async function deleteComment(comment_id) {
+    let sql = `
+        DELETE FROM comments
+        WHERE comment_id = ?;
+    `;
+
+    await con.query(sql, [comment_id]);
+
+    return { message: "Comment deleted successfully." };
+}
+
 module.exports = {
     createCommentTable,
     getCommentsByPostId,
-    createComment
+    createComment,
+    deleteComment
 };
